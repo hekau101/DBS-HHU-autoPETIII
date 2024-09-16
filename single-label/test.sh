@@ -28,7 +28,7 @@ docker run -it --rm \
         --gpus="all" \
         -v $SCRIPTPATH/test/input/:/input/ \
         -v autopet_baseline-output-$VOLUME_SUFFIX:/output/ \
-        autopet_baseline
+        autopet-single-label
 
 echo "Evaluation done, checking results"
 docker build -f Dockerfile.eval -t autopet_eval .
