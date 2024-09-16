@@ -2,4 +2,4 @@
 
 ./build.sh
 
-docker save autopet_baseline | gzip -c > autoPET_baseline.tar.gz
+docker save autopet-multi-label | gzip -c > autoPET_mulit_label.tar.gz

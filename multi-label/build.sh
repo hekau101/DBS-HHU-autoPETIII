@@ -2,4 +2,4 @@
 
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-docker build -t autopet_baseline "$SCRIPTPATH"
+docker build -t autopet-multi-label "$SCRIPTPATH"

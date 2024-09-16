@@ -89,7 +89,7 @@ class Autopet_baseline:
         """
         print("nnUNet segmentation starting!")
         cproc = subprocess.run(
-            f"nnUNetv2_predict -i {self.nii_path} -o {self.result_path} -d 042 -c 3d_fullres -f 0 1 2 3 4 5 --disable_tta",
+            f"nnUNetv2_predict -i {self.nii_path} -o {self.result_path} -d 001 -c 3d_fullres -f 0 1 2 3 4 --disable_tta",
             shell=True,
             check=True,
         )
