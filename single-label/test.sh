@@ -33,7 +33,7 @@ docker run -it --rm \
 echo "Evaluation done, checking results"
 docker build -f Dockerfile.eval -t autopet_eval .
 docker run --rm -it \
-        -v autopet_baseline-output-$VOLUME_SUFFIX:/output/ \
+        -v autopet-single-label-output-$VOLUME_SUFFIX:/output/ \
         -v $SCRIPTPATH/test/expected_output_nnUNet/:/expected_output/ \
         autopet_eval python3 -c """
 import SimpleITK as sitk
@@ -51,7 +51,7 @@ else:
     print(f'Test failed! MSE={mse}')
 """
 
-docker volume rm autopet_baseline-output-$VOLUME_SUFFIX
+docker volume rm autopet-single-label-output-$VOLUME_SUFFIX
 
 # Capture the end time and print difference
 end_time=$(date +%s)
